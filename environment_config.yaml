@@ -1,11 +1,14 @@
 attributes:
-  metadata:
-    # Settings group can be one of "general", "security", "compute", "network",
-    # "storage", "logging", "openstack_services" and "other".
-    group: 'other'
-  cinder_nfs_text:
-    value: 'Set default value'
-    label: 'Text field'
-    description: 'Description for text field'
+ server_ip:
+    value: ''
+    label: 'NFS server ip'
+    desciption: 'NFS server ip'
     weight: 25
     type: "text"
+ share_name:
+    value: ''
+    label: 'NFS server share'
+    desciption: 'NFS server share'
+    weight: 25
+    type: "text"
+desciption: ""
