@@ -30,3 +30,13 @@ file_line { 'cinder_driver':
 	path => "/etc/cinder/cinder.conf",
 	notify => Service[$cinder],
 	}
+cinder_config { 'DEFAULT/nfs_shares_config':
+	ensure => 'present',
+	value => "/etc/cinder/nfsshare",
+	notify => Service[$cinder],
+	}
+cinder_config { 'DEFAULT/volume_driver':
+	ensure => 'present',
+	value => "cinder.volume.drivers.nfs.NfsDriver",
+	notify => Service[$cinder],
+	}
