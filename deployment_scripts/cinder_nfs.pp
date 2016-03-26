@@ -18,18 +18,6 @@ file { '/etc/cinder/nfsshares':
 	mode => '0640',
 	require => File['/etc/cinder'],
 	}
-file_line { 'enable_nfs':
-	line => "nfs_shares_config = /etc/cinder/nfsshare",
-	after => "[DEFAULT]",
-	path => "/etc/cinder/cinder.conf",
-	notify => Service[$cinder],
-	}
-file_line { 'cinder_driver':
-	line => "volume_driver = cinder.volume.drivers.nfs.NfsDriver",
-	after => "nfs_shares_config",
-	path => "/etc/cinder/cinder.conf",
-	notify => Service[$cinder],
-	}
 cinder_config { 'DEFAULT/nfs_shares_config':
 	ensure => 'present',
 	value => "/etc/cinder/nfsshare",
