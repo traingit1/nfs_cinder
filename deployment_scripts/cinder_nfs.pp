@@ -2,7 +2,7 @@ notice('MODULAR: cinder_nfs.pp')
 $cinder_nfs = hiera('cinder_nfs', {})
 $server_ip = pick($cinder_nfs['server_ip'], {})
 $share_name = pick($cinder_nfs['share_name'], {})
-$cinder = [ 'cinder-api', 'cinder-scheduler']
+$cinder = [ 'cinder-api', 'cinder-scheduler','cinder-volume']
 
 service { $cinder:
 	ensure => 'running',
