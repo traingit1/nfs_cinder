@@ -11,8 +11,12 @@
 - id: cinder_nfs-deployment-puppet
   type: puppet
   role: [cinder_nfs_role]
-  requires: [deploy_start]
+  requires: [openstack-cinder]
   required_for: [deploy_end]
+  parameters:
+    puppet_manifest: cinder_nfs.pp
+    puppet_modules: /etc/puppet/modules
+    timeout: 500
 
 
 #  version: 2.0.0              # tasks v2.0.0 is supporting task-based deployment

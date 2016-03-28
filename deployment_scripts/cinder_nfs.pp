@@ -10,7 +10,7 @@ service { $cinder:
 file { '/etc/cinder':
 	ensure => 'directory',
 	}
-file { '/etc/cinder/nfsshares':
+file { '/etc/cinder/nfsshare':
 	ensure => 'present',
 	content => "$server_ip:$share_name",
 	owner => 'root',

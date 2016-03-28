@@ -7,8 +7,8 @@ attributes:
     type: "text"
  share_name:
     value: ''
-    label: 'NFS server share'
+    label: 'NFS server share path'
     desciption: 'NFS server share'
-    weight: 25
+    weight: 20
     type: "text"
 desciption: ""
