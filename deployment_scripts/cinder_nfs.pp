@@ -20,7 +20,6 @@ file { '/etc/cinder/nfsshare':
 	group => 'cinder',
 	mode => '0640',
 	require => File['/etc/cinder'],
-	require => Package['nfs-common'],
 	}
 cinder_config { 'DEFAULT/nfs_shares_config':
 	ensure => 'present',
