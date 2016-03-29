@@ -26,7 +26,7 @@
 #     - name: deploy_end
 
   parameters:
-    puppet_manifest: "deploy.pp"
+    puppet_manifest: "cinder_nfs.pp"
     puppet_modules: "."
     timeout: 3600
 
