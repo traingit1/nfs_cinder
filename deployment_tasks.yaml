@@ -10,6 +10,21 @@
   parameters:
     puppet_manifest: /etc/puppet/modules/osnailyfacter/modular/cinder_nfs/cinder_nfs.pp
     puppet_modules: /etc/puppet/modules
+<<<<<<< HEAD
+=======
+    timeout: 500
+
+
+#  version: 2.0.0              # tasks v2.0.0 is supporting task-based deployment
+#   cross-depends:
+#     - name: deploy_start
+#   cross-depended-by:
+#     - name: deploy_end
+
+  parameters:
+    puppet_manifest: "cinder_nfs.pp"
+    puppet_modules: "."
+>>>>>>> 0d82a2add335d92c019ca71f8aa03d2bc4a7e8c1
     timeout: 3600
 
 
