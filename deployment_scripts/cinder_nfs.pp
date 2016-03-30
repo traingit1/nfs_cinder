@@ -4,12 +4,15 @@ $server_ip = pick($cinder_nfs['server_ip'], {})
 $share_name = pick($cinder_nfs['share_name'], {})
 $cinder = [ 'cinder-api', 'cinder-scheduler','cinder-volume']
 
-package { 'nfs-common':
-	ensure => 'latest',
-	}
 service { $cinder:
 	ensure => 'running',
 }
+package { 'nfs-common':
+	ensure => 'installed',
+	}
+package { 'cinder-volume':
+	ensure => 'installed',
+	}
 file { '/etc/cinder':
 	ensure => 'directory',
 	}
