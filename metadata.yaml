@@ -3,7 +3,7 @@ name: cinder_nfs
 # Human-readable name for your plugin
 title: Title for cinder_nfs plugin
 # Plugin version
-version: '1.0.12'
+version: '1.0.13'
 # Description
 description: Please describe your plugin here
 # Required fuel version
