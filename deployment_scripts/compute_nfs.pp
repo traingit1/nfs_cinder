@@ -1,8 +1,7 @@
-notice('MODULAR: cinder_nfs.pp')
+notice('MODULAR: compute_nfs.pp')
 package { 'nfs-common':
         ensure => 'installed',
         }
-service { 'nfs-common':
-	ensure => running,
-	enable => true,
+package { 'cifs-utils':
+	ensure => 'installed',
 	}

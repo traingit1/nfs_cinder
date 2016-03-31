@@ -18,4 +18,3 @@
     puppet_manifest: compute_nfs.pp
     puppet_modules: /etc/puppet/modules/
     timeout: 600
-
